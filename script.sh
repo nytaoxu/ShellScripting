@@ -50,3 +50,17 @@ then
 else
   echo "$file is not a file."
 fi
+
+# case statement
+read -p "Are you 21 years of age or older? Y/N: " answer
+case $answer in
+  [Yy] | [Yy][Ee][Ss])
+    echo "You can drink beer. ^_^"
+    ;;
+  [Nn] | [Nn][Oo])
+    echo "You are not allowed to drink any alcohol."
+    ;;
+  *)
+    echo "Invalid answer."
+    ;;
+esac
