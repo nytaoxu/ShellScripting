@@ -64,3 +64,18 @@ case $answer in
     echo "Invalid answer."
     ;;
 esac
+
+# for loop
+cities="Chicago New_York Los_Angeles Tokyo London Hong_Kong"
+for city in $cities
+do
+  echo "$city"
+done
+
+# create 3 files: touch 1.txt 2.txt 3.txt
+files=$(ls *.txt)
+for file in $files
+do
+  echo "Renaming $file to new-$file"
+  mv $file "new-$file"
+done
