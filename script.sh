@@ -99,3 +99,10 @@ function greet() {
   echo "1: $1, 2: $2"
 }
 greet abc xyz
+
+# create a folder and write to a file
+mkdir "folder"
+touch "folder/practice.txt"
+echo "hello world" >> "folder/practice.txt"
+echo "folder and file created."
+cat "folder/practice.txt"
