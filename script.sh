@@ -84,6 +84,18 @@ done
 line=0
 while read -r current_line
 do
-  line=$((line + 1))
+  line=$((line + 1)) # ((line++))
   echo "$line: $current_line"
 done < "text.txt"
+
+# function
+function fun() {
+  echo "hello world"
+}
+fun
+
+# function with parameters
+function greet() {
+  echo "1: $1, 2: $2"
+}
+greet abc xyz
