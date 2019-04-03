@@ -73,9 +73,17 @@ do
 done
 
 # create 3 files: touch 1.txt 2.txt 3.txt
-files=$(ls *.txt)
-for file in $files
+# files=$(ls *.txt)
+# for file in $files
+# do
+#   echo "Renaming $file to new-$file"
+#   mv $file "new-$file"
+# done
+
+# while loop
+line=0
+while read -r current_line
 do
-  echo "Renaming $file to new-$file"
-  mv $file "new-$file"
-done
+  line=$((line + 1))
+  echo "$line: $current_line"
+done < "text.txt"
